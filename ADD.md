@@ -1,5 +1,11 @@
 ## Add Matrix Multiplcation codes inspired by the headless example
 
+### Install Vulkan driver
+Try to install directly first, or from the [link](https://www.ravbug.com/tutorials/rpi-vulkan/) belew
+```bash
+sudo apt install mesa-vulkan-drivers libvulkan-dev
+```
+
 ### Download this Vulkan example
 ```bash
 git clone --recursive --depth=1 https://github.com/SaschaWillems/Vulkan.git 
