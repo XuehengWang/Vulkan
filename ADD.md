@@ -1,5 +1,4 @@
 ### Download this Vulkan example
-reference:[https://www.ravbug.com/tutorials/rpi-vulkan/](https://www.ravbug.com/tutorials/rpi-vulkan/)
 ```bash
 git clone --recursive --depth=1 https://github.com/SaschaWillems/Vulkan.git 
 cd Vulkan
@@ -9,6 +8,7 @@ mkdir build && cd build
 cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
+reference: [https://www.ravbug.com/tutorials/rpi-vulkan/](https://www.ravbug.com/tutorials/rpi-vulkan/)
 
 ### Add files for matmul
 - examples/matmul/matmul.cpp
