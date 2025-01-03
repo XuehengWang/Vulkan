@@ -77,11 +77,17 @@ function(buildExample EXAMPLE_NAME)
 endfunction(buildExample)
 
 # Build all examples
+# Build all examples
 function(buildExamples)
-	foreach(EXAMPLE ${EXAMPLES})
-		buildExample(${EXAMPLE})
-	endforeach(EXAMPLE)
+	if(BUILD_MATMUL)
+		buildExample("matmul")
+	else()
+		foreach(EXAMPLE ${EXAMPLES})
+			buildExample(${EXAMPLE})
+		endforeach(EXAMPLE)
+	endif()
 endfunction(buildExamples)
+
 
 set(EXAMPLES
 	bloom
@@ -121,6 +127,7 @@ set(EXAMPLES
 	inlineuniformblocks
 	inputattachments
 	instancing
+	matmul
 	meshshader
 	multisampling
 	multithreading
@@ -178,5 +185,7 @@ set(EXAMPLES
 	viewportarray
 	vulkanscene
 )
+
+set(BUILD_MATMUL TRUE CACHE BOOL "Build matmul example only")
 
 buildExamples()
