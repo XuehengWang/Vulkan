@@ -8,6 +8,8 @@ sudo apt install mesa-vulkan-drivers libvulkan-dev
 
 ### Download this Vulkan example
 ```bash
+sudo apt install ninja-build
+
 git clone --recursive --depth=1 https://github.com/SaschaWillems/Vulkan.git 
 cd Vulkan
 python3 download_assets.py 
